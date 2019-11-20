@@ -10,6 +10,7 @@
 *.vcxproj
 *.filters
 *.user  
+*.txt
 ##class file##
 *.com
 *.class
@@ -17,4 +18,4 @@
 *.exe
 *.o
 *.so
-*.txt
+

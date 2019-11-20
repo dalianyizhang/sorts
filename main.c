@@ -88,19 +88,19 @@ void main() {
 	printf(" -预处理完成！\n");
 
 	/*1桶排序*/
-	fseek(fp, 0L, SEEK_SET);
-	printf(">算法1开始排序，请稍候...\n");
-	start = clock();
-	for (int j = 0; j < sorttime; j++) {
-		for (long i = 0; i < sortnum; i++) {
-			fscanf_s(fp, "%6ld", &data_tmp);
-			insertElem(pA, pA->len - 1, data_tmp);
-		}
-		bucket_sort(pA->items, sortnum);
-	}
-	stop = clock();
-	duration[0] = ((double)(stop - start - extra_cost)) / CLK_TCK;
-	printf("  -算法1排序完成！\n>算法2开始排序，请稍候...\n");
+	//fseek(fp, 0L, SEEK_SET);
+	//printf(">算法1开始排序，请稍候...\n");
+	//start = clock();
+	//for (int j = 0; j < sorttime; j++) {
+	//	for (long i = 0; i < sortnum; i++) {
+	//		fscanf_s(fp, "%6ld", &data_tmp);
+	//		insertElem(pA, pA->len - 1, data_tmp);
+	//	}
+	//	bucket_sort(pA->items, sortnum);
+	//}
+	//stop = clock();
+	//duration[0] = ((double)(stop - start - extra_cost)) / CLK_TCK;
+	//printf("  -算法1排序完成！\n>算法2开始排序，请稍候...\n");
 
 	/*2堆排序*/
 	fseek(fp, 0L, SEEK_SET);
@@ -160,7 +160,7 @@ void main() {
 	//处理&打印实验数据
 	printf(">本次排序每次处理 %d个数据,共处理 %d次，\n	各算法每次排序平均用时分别为:\n", sortnum, sorttime);
 	printf("每次预处理花费时间：  %lf\n", extra_cost/sorttime);
-	for (int i = 0; i < SORTKINDS; i++) {
+	for (int i = 1; i < SORTKINDS; i++) {
 		Sleep(500);
 		time_second[i] = duration[i] /sorttime;
 		printf("	-算法%d.  %lf秒 \n", i + 1, time_second[i]);
