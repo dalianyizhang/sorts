@@ -48,10 +48,10 @@ void main() {
 	scanf_s("%d", &sortorder);
 	printf("\n\n");
 	sortnum = pow(10, sortorder);
-	if (sortorder <= 3) 
+	if (sortorder <= 4) 
 		sorttime = 100000/sortnum;
 	else
-		sorttime = 1000000 / sortnum;
+		sorttime = 1;
 
 	/*生成数表 多次排序 求均值*/
 	srand(time(NULL));
