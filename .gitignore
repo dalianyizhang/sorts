@@ -1,0 +1,20 @@
+##ignore this file##
+/Debug/
+.classpath
+.project
+.settings
+##filter databfile¡¢sln file##
+*.mdb
+*.ldb
+*.sln
+*.vcxproj
+*.filters
+*.user  
+##class file##
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.txt
